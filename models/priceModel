@@ -1,0 +1,60 @@
+const mongoose =require('mongoose') 
+
+const priceSchema = new mongoose.Schema({
+    
+epochId: {
+        type: Number,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true,
+    },
+    endTime: {
+        type: Number,
+        required: true
+    },
+    voterPrice: {
+        type: Number,
+        required: true
+    },
+    voterAddress: {
+        type: String,
+        required: true
+    },
+    lowRewardPrice: {
+        type: Number,
+        required: true
+    },
+    highRewardPrice: {
+        type: Number,
+        required: true
+    },
+    alias: {
+        type: String,
+        required: true
+    },
+    coefficient:{
+        type: String,
+        required: true  
+    },
+    coefficientLow:{
+        type: String,
+        required: true  
+    },
+    coefficientHigh:{
+        type: String,
+        required: true  
+    },
+    bestCoefficient:{
+        type: String,
+        required: true  
+    },
+   
+}, 
+{
+    timestamps: true
+})
+
+let Dataset = mongoose.models.price || mongoose.model('price', priceSchema)
+module.exports= Dataset
