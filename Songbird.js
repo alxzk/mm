@@ -10,7 +10,7 @@ const connectDB = async () => {
     return;
   }
   mongoose.connect(
-    "mongodb+srv://zoubair:21923313@cluster0.vj9jh.mongodb.net/SavePrice?retryWrites=true&w=majority",
+    "Here put your URL MONGO_db",
     (err) => {
       if (err) throw err;
       console.log("Connected to mongodb.");
